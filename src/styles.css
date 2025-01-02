@@ -1,1 +1,30 @@
-/* You can add global styles to this file, and also import other style files */
+/* Reset styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Full height for body and html */
+html, body {
+  height: 100%;
+}
+
+/* Root application container */
+app-root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Full viewport height */
+}
+
+/* Header and footer should not shrink */
+header, footer {
+  flex-shrink: 0;
+}
+
+/* Main wrapper to fill remaining space */
+.wrapper {
+  flex: 1; /* Stretch to fill available space */
+  display: flex; /* Side-by-side layout */
+  overflow: hidden; /* Avoid unwanted scrollbars */
+}

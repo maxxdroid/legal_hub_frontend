@@ -1,0 +1,30 @@
+/* Home Component Styles */
+.home-wrapper {
+    display: flex;
+    flex-direction: column; /* Arrange children vertically */
+    min-height: 100vh; /* Full height of the viewport */
+}
+
+.content {
+    flex: 1; /* Fills the remaining space between header and footer */
+    padding: 1rem; /* Optional: Add spacing */
+    background-color: #f9f9f9; /* Optional: Background color */
+}
+
+.footer {
+    flex-shrink: 0; /* Prevent footer from shrinking */
+}
+
+.welcome-section {
+    background-color: #f9f9f9; /* Optional: Light background */
+    padding: 2rem 0;
+  }
+  
+  h2 {
+    color: #2c3e50; /* Optional: Main heading color */
+  }
+  
+  p {
+    color: #34495e; /* Optional: Subheading color */
+  }
+  

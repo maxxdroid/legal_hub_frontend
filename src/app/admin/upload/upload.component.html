@@ -1,0 +1,175 @@
+<div class="wrapper">
+
+  <app-header></app-header>
+
+  <div class="content">
+    <div class="upload-main">
+      <div class="container">
+        <!-- Page Title -->
+        <div class="text-center mb-5">
+          <h3 class="upload-title">Upload</h3>
+        </div>
+    
+        <!-- Upload Form -->
+        <div class="upload-container">
+          <h2 class="upload-heading">Upload PDF Document</h2>
+          <form (ngSubmit)="onSubmit()">
+            <div class="form-group-row">
+              
+              <!-- Title and Author side by side -->
+              <div class="form-group half-width">
+                <label for="title">Title</label>
+                <input
+                  type="text"
+                  id="title"
+                  [(ngModel)]="title"
+                  name="title"
+                  placeholder="Enter the title"
+                  class="form-control"
+                />
+              </div>
+              <div class="form-group half-width">
+                <label for="author">Author</label>
+                <input
+                  type="text"
+                  id="author"
+                  [(ngModel)]="author"
+                  [ngModelOptions]="{ standalone: true }" 
+                  placeholder="Enter the author"
+                  class="form-control"
+                />
+              </div>
+            </div>
+
+
+            <!-- Description -->
+            <div class="form-group">
+              <label for="description">Description</label>
+              <textarea
+                id="description"
+                [(ngModel)]="description"
+                [ngModelOptions]="{ standalone: true }" 
+                rows="4"
+                placeholder="Enter the description"
+                class="form-control"
+              ></textarea>
+            </div>
+
+
+            <!-- File Upload -->
+            <div class="form-group">
+              <label for="file-upload" class="upload-box">
+                <i class="fas fa-cloud-upload-alt"></i>
+                <p>Click here to upload a PDF file</p>
+                <span class="file-name">{{ selectedFileName }}</span>
+              </label>
+              <input
+                type="file"
+                id="file-upload"
+                class="file-input"
+                accept="application/pdf"
+                (change)="onFileSelected($event)"
+              />
+            </div>
+
+
+            <div class="text-center">
+              <!-- Stylish Upload Button -->
+              <button type="submit" class="btn upload-btn">
+                <i class="fas fa-upload me-2"></i> Upload Document
+              </button>
+            </div>
+          </form>
+        </div>
+          
+
+
+      </div>
+    
+      
+    </div>
+
+    <!-- Section for Uploaded PDFs -->
+    <div class="previous-uploads">
+      <h2 class="section-heading">Previous Uploaded Documents</h2>
+    
+      <!-- Dropdown for selecting filter/action -->
+      <div class="select-container">
+        <label for="filter" class="filter-label">Filter By:</label>
+        <select id="filter" class="filter-select">
+          <option value="all">All Documents</option>
+          <option value="recent">Recently Uploaded</option>
+          <option value="author">Author</option>
+        </select>
+      </div>  
+    
+      <!-- Table for previous uploads -->
+      <table class="upload-table">
+        <thead>
+          <tr>
+            <th>Filename</th>
+            <th>Date</th>
+            <th>Author</th>
+            <th>Uploaded By</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Legal_Document_1.pdf</td>
+            <td>2024-12-30</td>
+            <td>John Doe</td>
+            <td>Admin</td>
+          </tr>
+          <tr>
+            <td>Contract_Agreement.pdf</td>
+            <td>2024-12-29</td>
+            <td>Jane Smith</td>
+            <td>User123</td>
+          </tr>
+          <tr>
+            <td>Case_Study.pdf</td>
+            <td>2024-12-28</td>
+            <td>Michael Brown</td>
+            <td>Admin</td>
+          </tr>
+          <tr>
+            <td>Case_Study.pdf</td>
+            <td>2024-12-28</td>
+            <td>Michael Brown</td>
+            <td>Admin</td>
+          </tr>
+          <tr>
+            <td>Case_Study.pdf</td>
+            <td>2024-12-28</td>
+            <td>Michael Brown</td>
+            <td>Admin</td>
+          </tr>
+          <tr>
+            <td>Case_Study.pdf</td>
+            <td>2024-12-28</td>
+            <td>Michael Brown</td>
+            <td>Admin</td>
+          </tr>
+          <tr>
+            <td>Case_Study.pdf</td>
+            <td>2024-12-28</td>
+            <td>Michael Brown</td>
+            <td>Admin</td>
+          </tr>
+          <tr>
+            <td>Case_Study.pdf</td>
+            <td>2024-12-28</td>
+            <td>Michael Brown</td>
+            <td>Admin</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+
+  <div class="footer">
+    <app-footer></app-footer>
+  </div>
+
+</div>

@@ -1,0 +1,35 @@
+.welcome-section {
+    padding: 2rem 0;
+    background-color: #f9f9f9;
+  }
+  
+  .lead {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #2c3e50;
+  }
+  
+  .hero-logos img {
+    max-width: 100px;
+    margin: 0.5rem;
+  }
+  
+  .hero-logos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  .facebook-forecolor {
+    color: #3b5998;
+  }
+  
+  .twitter-x-forecolor {
+    color: #1da1f2;
+  }
+  
+  .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+  }
+  
