@@ -6,9 +6,9 @@
     <div class="upload-main">
       <div class="container">
         <!-- Page Title -->
-        <div class="text-center mb-5">
+        <!-- <div class="text-center mb-5">
           <h3 class="upload-title">Upload</h3>
-        </div>
+        </div> -->
     
         <!-- Upload Form -->
         <div class="upload-container">
@@ -107,60 +107,18 @@
       <table class="upload-table">
         <thead>
           <tr>
-            <th>Filename</th>
+            <th>Title</th>
             <th>Date</th>
             <th>Author</th>
             <th>Uploaded By</th>
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>Legal_Document_1.pdf</td>
-            <td>2024-12-30</td>
-            <td>John Doe</td>
-            <td>Admin</td>
-          </tr>
-          <tr>
-            <td>Contract_Agreement.pdf</td>
-            <td>2024-12-29</td>
-            <td>Jane Smith</td>
-            <td>User123</td>
-          </tr>
-          <tr>
-            <td>Case_Study.pdf</td>
-            <td>2024-12-28</td>
-            <td>Michael Brown</td>
-            <td>Admin</td>
-          </tr>
-          <tr>
-            <td>Case_Study.pdf</td>
-            <td>2024-12-28</td>
-            <td>Michael Brown</td>
-            <td>Admin</td>
-          </tr>
-          <tr>
-            <td>Case_Study.pdf</td>
-            <td>2024-12-28</td>
-            <td>Michael Brown</td>
-            <td>Admin</td>
-          </tr>
-          <tr>
-            <td>Case_Study.pdf</td>
-            <td>2024-12-28</td>
-            <td>Michael Brown</td>
-            <td>Admin</td>
-          </tr>
-          <tr>
-            <td>Case_Study.pdf</td>
-            <td>2024-12-28</td>
-            <td>Michael Brown</td>
-            <td>Admin</td>
-          </tr>
-          <tr>
-            <td>Case_Study.pdf</td>
-            <td>2024-12-28</td>
-            <td>Michael Brown</td>
-            <td>Admin</td>
+          <tr *ngFor="let doc of documents">
+            <td>{{ doc.title }}</td>
+            <td>{{ doc.createdAt| date: 'medium' }}</td>
+            <td>{{ doc.author }}</td>
+            <td>{{ doc.author }}</td>
           </tr>
         </tbody>
       </table>

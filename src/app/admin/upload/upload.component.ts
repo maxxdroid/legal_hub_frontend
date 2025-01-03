@@ -4,10 +4,11 @@ import { FooterComponent } from '../../layout/footer/footer.component';
 import { DocumentService } from '../../services/documents_service/document.service';
 import { FormsModule } from '@angular/forms';
 import { legalDocument, legalDocuments } from '../../interface/type';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-upload',
-  imports: [HeaderComponent, FooterComponent, FormsModule],
+  imports: [HeaderComponent, FooterComponent, FormsModule, CommonModule],
   templateUrl: './upload.component.html',
   styleUrl: './upload.component.css'
 })
@@ -45,6 +46,11 @@ export class UploadComponent {
     formData.append('title', this.title);
     formData.append('author', this.author);
     formData.append('description', this.description);
+    formData.append('category', 'legal');
+    this.documentService.postDocument(formData).subscribe((document: legalDocuments) => {
+      console.log(document);
+      this.documents = document.data;
+    });
   }
 
   onFileSelected(event: any): void {

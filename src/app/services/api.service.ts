@@ -20,8 +20,8 @@ export class ApiService {
   }
 
   // POST method to add a new document
-  post(url: string, body: FormData, options?: Options): Observable<legalDocument> {
-    return this.httpClient.post<legalDocument>(url, body, options);
+  post<T>(url: string, body: FormData, options?: Options): Observable<T> {
+    return this.httpClient.post<T>(url, body, options);
   }
   
   // PUT method to update an entire document

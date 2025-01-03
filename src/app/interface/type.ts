@@ -22,7 +22,16 @@ export interface legalDocument {
     title: string;
     descriptiom: string;
     category: string;
+    createdAt: string;
+    bundle: string;
+    id: string;
 }
+
+export interface Response {
+    data: legalDocument;
+    status: number;
+    message: string;
+ }
 
 export interface legalDocuments {
     data: legalDocument[];

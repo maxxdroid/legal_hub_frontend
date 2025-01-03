@@ -12,8 +12,13 @@ export class DocumentService {
     private api: ApiService,
   ) { }
 
+
   getDocuments = (params: PaginationParams) : Observable<legalDocuments> => { 
     return this.api.get<legalDocuments>("https://legal-hub.onrender.com/legal_hub/api/v1/bundles", { params });
+  }
+
+  postDocument = (body: FormData) : Observable<legalDocuments> => {
+    return this.api.post("https://legal-hub.onrender.com/legal_hub/api/v1/bundles/upload", body);
   }
 
 }
