@@ -2,6 +2,14 @@
 
   <app-header></app-header>
 
+  <div *ngIf="isUploading" class="progress-container">
+    <div class="progress-bar">
+      <div class="progress" [style.width]="uploadProgress === 'Uploading...' ? '50%' : '100%'"></div>
+    </div>
+    <p class="progress-message">{{ uploadProgress }}</p>
+  </div>
+  
+
   <div class="content">
     <div class="upload-main">
       <div class="container">

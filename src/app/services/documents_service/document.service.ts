@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { ApiService } from '../api.service';
-import { legalDocuments, PaginationParams } from '../../interface/type';
+import { DocResponse, legalDocuments, PaginationParams } from '../../interface/type';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -17,7 +17,7 @@ export class DocumentService {
     return this.api.get<legalDocuments>("https://legal-hub.onrender.com/legal_hub/api/v1/bundles", { params });
   }
 
-  postDocument = (body: FormData) : Observable<legalDocuments> => {
+  postDocument = (body: FormData) : Observable<DocResponse> => {
     return this.api.post("https://legal-hub.onrender.com/legal_hub/api/v1/bundles/upload", body);
   }
 

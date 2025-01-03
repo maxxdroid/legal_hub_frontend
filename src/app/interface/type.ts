@@ -27,7 +27,7 @@ export interface legalDocument {
     id: string;
 }
 
-export interface Response {
+export interface DocResponse {
     data: legalDocument;
     status: number;
     message: string;
