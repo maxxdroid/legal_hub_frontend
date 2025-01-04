@@ -12,5 +12,6 @@ import { DocsListComponent } from './layout/docs-list/docs-list.component';
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
+[x: string]: string;
 
 }
