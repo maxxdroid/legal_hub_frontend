@@ -4,10 +4,21 @@
     <div class="content">
         <!-- Main content goes here -->
         
-        <!-- <div class="welcome">
+        <div class="welcome">
             <app-welcome></app-welcome>
-        </div> -->
+        </div>
         
+        <div class="documents">
+            <div class="docs-list">
+                <app-docs-list [title]="'Judgments'"></app-docs-list>
+            </div>
+            <div class="docs-list">
+                <app-docs-list [title]="'Legislation'"></app-docs-list>
+            </div>
+            <div class="docs-list">
+                <app-docs-list [title]="'Gazettes'"></app-docs-list>
+            </div>
+        </div>
           
 
     </div>

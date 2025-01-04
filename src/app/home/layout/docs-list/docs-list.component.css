@@ -1,0 +1,39 @@
+.doc-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .cell-title {
+    /* padding: 8px 15px; */
+    text-align: left;
+  }
+  
+  .cell-title a {
+    text-decoration: none;
+    color: #000000;
+  }
+  
+  .cell-title a:hover {
+    text-decoration: underline;
+  }
+  
+  .cell-date {
+    padding: 8px 15px;
+    text-align: right;
+    color: #555;
+  }
+  
+  .btn-primary {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056b3;
+  }
+  

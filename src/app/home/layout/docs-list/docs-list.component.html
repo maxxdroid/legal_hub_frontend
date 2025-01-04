@@ -1,0 +1,18 @@
+<div class="col mb-5">
+    <h2 class="mb-4">{{ title }}</h2>
+  
+    <table class="doc-table">
+      <tbody>
+        <tr *ngFor="let document of documents">
+          <td class="cell-title">
+            <a [href]="'/akn/' + document.bundle">{{ document.title }}</a>
+          </td>
+          <td class="cell-date" style="white-space: nowrap;">
+            {{ document.createdAt | date: 'd MMMM yyyy' }}
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  
+    <a class="btn btn-primary" href="/judgments/">View more {{ title }}</a>
+  </div>

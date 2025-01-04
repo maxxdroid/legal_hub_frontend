@@ -7,7 +7,10 @@
 
 .content {
     flex: 1; /* Fills the remaining space between header and footer */
-    padding: 1rem; /* Optional: Add spacing */
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
     background-color: #f9f9f9; /* Optional: Background color */
 }
 
@@ -17,7 +20,7 @@
 
 .welcome-section {
     background-color: #f9f9f9; /* Optional: Light background */
-    padding: 2rem 0;
+    padding: 4rem 0;
   }
   
   h2 {
@@ -26,5 +29,32 @@
   
   p {
     color: #34495e; /* Optional: Subheading color */
+  }
+  
+  .documents {
+    display: flex;
+    flex-wrap: wrap; /* Ensures items wrap to the next row */
+    gap: 20px; /* Adds consistent spacing between items */
+    justify-content: space-between; /* Distributes items evenly */
+  }
+  
+  .docs-list {
+    flex: 0 1 calc(50% - 20px); /* Ensures items take up 50% of the row width, minus the gap */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    border-radius: 5px;
+    background-color: #fff;
+    box-sizing: border-box; /* Ensures padding and border are included in the width calculation */
+  }
+  
+  @media (max-width: 768px) {
+    .docs-list {
+      flex: 0 1 100%; /* Stacks items vertically on smaller screens */
+    }
+  }
+  
+  h2 {
+    margin-top: 0;
+    color: #333;
   }
   
