@@ -285,10 +285,54 @@ textarea.form-control {
 }
 
 /* Responsive Table */
-@media (max-width: 768px) {
-  .upload-table th,
+@media (max-width: 480px) {
+  .upload-table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .upload-table thead {
+    display: none; /* Hide table headers on smaller screens */
+  }
+
+  .upload-table tbody tr {
+    display: block;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+    padding: 10px;
+    text-align: left; /* Ensure text alignment is consistent */
+  }
+
   .upload-table td {
-    font-size: 0.85rem;
+    display: flex;
+    justify-content: flex-start; /* Align content to the left */
+    align-items: center;
+    padding: 8px 0;
+    border: none; /* Remove borders for a cleaner look */
+    font-size: 0.9rem;
+    position: relative;
+  }
+
+  .upload-table td::before {
+    content: attr(data-label); /* Add labels dynamically */
+    flex: 0 0 120px; /* Fixed width for labels */
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #3498db;
+    margin-right: 10px;
+  }
+
+  .upload-table tbody tr {
+    display: flex;
+    flex-direction: column; /* Ensure all cells stack vertically */
+    align-items: flex-start; /* Center align rows */
+  }
+
+  .upload-table td:last-child {
+    margin-bottom: 0;
   }
 }
 
