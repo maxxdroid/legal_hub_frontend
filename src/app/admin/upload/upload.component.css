@@ -271,6 +271,7 @@ textarea.form-control {
 
 .upload-table tbody tr:hover {
   background-color: #e8f5ff;
+  cursor: pointer;
 }
 
 .upload-table th {

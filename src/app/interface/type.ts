@@ -24,6 +24,7 @@ export interface legalDocument {
     category: string;
     createdAt: string;
     bundle: string;
+    downloadURL: string;
     id: string;
 }
 

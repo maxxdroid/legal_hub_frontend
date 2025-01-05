@@ -1,11 +1,11 @@
 <div class="col mb-5">
     <h2 class="mb-4">{{ title }}</h2>
   
-    <table class="doc-table">
+    <table class="doc-table"> 
       <tbody>
         <tr *ngFor="let document of documents">
           <td class="cell-title">
-            <a [href]="'/akn/' + document.bundle">{{ document.title }}</a>
+            <a [href]="'https://legal-hub.onrender.com' + document.downloadURL">{{ document.title }}</a>
           </td>
           <td class="cell-date" style="white-space: nowrap;">
             {{ document.createdAt | date: 'd MMMM yyyy' }}

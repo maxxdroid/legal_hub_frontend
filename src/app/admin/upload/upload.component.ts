@@ -40,6 +40,10 @@ export class UploadComponent {
     });
   }
 
+  openLink(link: string): void {
+    window.open(link, '_blank'); // Opens the link in a new tab
+  }
+
   onSubmit(): void {
     if (!this.selectedFile || !this.title || !this.author || !this.description) {
       alert('Please fill in all fields and select a file!');
